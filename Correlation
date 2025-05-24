@@ -1,0 +1,37 @@
+# ============================
+# Step 5: Correlation Test
+# Purpose: Compare standard linear correlation with nonlinear CCM causality
+# ============================
+
+# Load necessary libraries
+library(readxl)
+library(ggplot2)
+
+# ----------------------------
+# 1. Load cleaned dataset
+# ----------------------------
+data <- read_excel("your_path_here/Cleaned_Carapungo_2024.xlsx")  # <-- Paste your file path here
+data$Date <- as.Date(data$Date)
+
+# ----------------------------
+# 2. Select variables for correlation
+# ----------------------------
+x <- data$Carapungo_PM2.5
+y <- data$Carapungo_RH
+
+# ----------------------------
+# 3. Calculate Pearson Correlation
+# ----------------------------
+correlation <- cor(x, y, use = "complete.obs", method = "pearson")
+cat("Pearson Correlation:", round(correlation, 3), "\n")
+
+# ----------------------------
+# 4. Plot scatterplot
+# ----------------------------
+ggplot(data, aes(x = x, y = y)) +
+  geom_point(alpha = 0.5, color = "blue") +
+  geom_smooth(method = "lm", se = TRUE, col = "red") +
+  labs(title = "Scatterplot: Carapungo_PM2.5 vs Carapungo_RH",
+       x = "PM2.5", y = "Relative Humidity",
+       subtitle = paste("Pearson Correlation:", round(correlation, 3))) +
+  theme_minimal()
