@@ -1,0 +1,15 @@
+climate-airquality-causal-analysis/
+├── data/
+│   └── raw/             # Raw datasets (original format)
+│   └── cleaned/         # Cleaned datasets after imputation
+├── scripts/
+│   └── 1_data_cleaning.R
+│   └── 2_ccm_analysis.R
+│   └── 3_surrogate_test.R
+│   └── 4_partial_derivative_analysis.R
+│   └── 5_correlation_analysis.R
+├── outputs/
+│   └── plots/           # Store all generated graphs
+│   └── results/         # Store result CSVs or .RDS files
+├── README.md
+
