@@ -3,7 +3,7 @@ R code for data cleaning, Convergent Cross Mapping (CCM), surrogate significance
 
 ## Project Overview
 
-This repository contains all R scripts developed during the final phase of the Master's thesis research titled **"Climate Change Affecting Air Quality"**. The aim is to investigate how climate indicators (such as temperature, humidity, wind) influence air pollutant concentrations (like PM2.5, O3, NO2) using causal inference techniques.
+This repository contains all R scripts developed during the Master's thesis research titled **"Climate Change Affecting Air Quality"**. The aim is to investigate how climate indicators (such as temperature, humidity, wind, etc. ) influence air pollutant concentrations (like PM2.5, O3, NO2, etc.) using causal inference techniques.
 
 ## Contents
 
